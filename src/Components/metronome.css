@@ -1,11 +1,15 @@
 .metronome {
     text-align: center;
+    font-weight: bold;
     max-width: 500px;
     margin: 0 auto;
     padding: 30px;
-    color: orange;
+    color: white;
 }
 
+.background {
+    background-color: #81c113;
+}
 .bpm-slider input {
     width: 100%;
 }

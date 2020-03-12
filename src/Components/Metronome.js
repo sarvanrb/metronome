@@ -74,23 +74,32 @@ class Metronome extends Component {
         const { bpm, playing } = this.state;
 
         return (
-            <div className="metronome container border-warning">
-                <h2 className="m-5"> Simple Metronome App</h2>
+            <div className="metronome container ">
+                <div className="row">
+                    <div className="col"></div>
+                    <div className="col-12 border border-warning background mt-5 p-5 rounded">
+                        <h2 className="m-2"> Simple Metronome App</h2>
 
-                <div className="bpm-slider">
-                    <div>{bpm} BPM</div>
-                    <input
-                        type="range"
-                        min="60"
-                        max="300"
-                        value={bpm}
-                        onChange={this.handleBpmChange}
-                    />
+                        <div className="bpm-slider mt-5">
+                            <div>{bpm} BPM</div>
+                            <input
+                                type="range"
+                                min="60"
+                                max="300"
+                                value={bpm}
+                                onChange={this.handleBpmChange}
+                            />
+                        </div>
+
+                        <button
+                            className="button mt-5"
+                            onClick={this.startStop}
+                        >
+                            {playing ? "Stop" : "Start"}
+                        </button>
+                    </div>
+                    <div className="col"></div>
                 </div>
-
-                <button className="m-5" onClick={this.startStop}>
-                    {playing ? "Stop" : "Start"}
-                </button>
             </div>
         );
     }
